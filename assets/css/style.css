@@ -1,8 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap');
 
-
-
 :root {
   --color-body: #b6cbce;
   --color-heading: #eef3db;
@@ -13,7 +11,7 @@
   --sidbar-width: 240px;
   --font-base: "Bai Jamjuree";
   
-}/*#a5b568*/
+}
 
 body {
   background: linear-gradient(135deg, #092038 20%, #09244c 50%, #d7d5bc 100%);
@@ -21,14 +19,9 @@ body {
   font-family: var(--font-base), sans-serif;
 }
 
-
-
 #home, #work {
   background: none; /* Ensures no background color overrides the gradient */
 }
-
-
-
 
 h1,h2,h3,h4,h5,h6 {
   color: #F5E79E;
@@ -53,7 +46,6 @@ img {
 .rounded-circle {
   border-radius: 50%!important; /* Ensures this styling takes precedence */
 }
-
 
 .text-brand {
   color: var(--color-brand);
@@ -314,4 +306,230 @@ img {
 
 .star:nth-child(7n) {
   animation-duration: 5s, 6s; /* Slower twinkle, moderate movement */
+}
+
+/* ========================= */
+/* MOBILE RESPONSIVE STYLES */
+/* ========================= */
+@media only screen and (max-width: 600px) {
+  
+  /* Adjust the navbar to be horizontal instead of vertical */
+  .navbar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    min-height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    z-index: 1000;
+  }
+
+  .navbar .nav-item {
+    margin-bottom: 0; /* Remove extra space between nav items */
+  }
+
+  .navbar .nav-link {
+    padding: 10px 8px; /* Reduce padding to fit in mobile screens */
+    font-size: 14px;
+  }
+
+  /* Adjust content wrapper to prevent overlap with navbar */
+  #content-wrapper {
+    padding-left: 0;
+    padding-bottom: 80px; /* Adds space for fixed navbar at bottom */
+  }
+
+  /* Resize and center profile image */
+  .navbar-brand img {
+    max-width: 100px; 
+    max-height: 110px;
+    margin: 5px auto;
+  }
+
+  /* Adjust heading sizes for smaller screens */
+  h1 {
+    font-size: 24px;
+  }
+  
+  h2 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  /* Reduce spacing for full-height sections */
+  .full-height {
+    min-height: auto;
+    padding: 20px 10px;
+  }
+
+  /* Center align content */
+  .full-height, .text-center {
+    text-align: center;
+  }
+
+  /* Adjust button sizes */
+  .btn {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+
+  /* Resize icon boxes */
+  .iconbox {
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+  }
+
+  /* Ensure images are properly responsive */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Contact form adjustments */
+  #contact .form-control {
+    width: 100%;
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  /* Social icons adjustments */
+  .social-icons a {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+  }
+
+  /* Fix the starry sky background on mobile */
+  .starry-sky {
+    height: 100%;
+    overflow: hidden;
+    background-size: cover;
+  }
+
+  /* Adjust star animation for small screens */
+  .star {
+    width: 2px;
+    height: 2px;
+    animation: twinkle 3s infinite ease-in-out, moveStar 7s linear infinite;
+  }
+}
+
+/* ========================= */
+/* MOBILE RESPONSIVE STYLES */
+/* ========================= */
+@media only screen and (max-width: 750px) {
+  
+  /* Adjust the navbar to be horizontal instead of vertical */
+  .navbar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    min-height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    z-index: 1000;
+  }
+
+  .navbar .nav-item {
+    margin-bottom: 0; /* Remove extra space between nav items */
+  }
+
+  .navbar .nav-link {
+    padding: 10px 8px; /* Reduce padding to fit in mobile screens */
+    font-size: 14px;
+  }
+
+  /* Adjust content wrapper to prevent overlap with navbar */
+  #content-wrapper {
+    padding-left: 0;
+    padding-bottom: 80px; /* Adds space for fixed navbar at bottom */
+  }
+
+  /* Resize and center profile image */
+  .navbar-brand img {
+    max-width: 100px; 
+    max-height: 110px;
+    margin: 5px auto;
+  }
+
+  /* Adjust heading sizes for smaller screens */
+  h1 {
+    font-size: 24px;
+  }
+  
+  h2 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  /* Reduce spacing for full-height sections */
+  .full-height {
+    min-height: auto;
+    padding: 20px 10px;
+  }
+
+  /* Center align content */
+  .full-height, .text-center {
+    text-align: center;
+  }
+
+  /* Adjust button sizes */
+  .btn {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+
+  /* Resize icon boxes */
+  .iconbox {
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+  }
+
+  /* Ensure images are properly responsive */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Contact form adjustments */
+  #contact .form-control {
+    width: 100%;
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  /* Social icons adjustments */
+  .social-icons a {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+  }
+
+  /* Fix the starry sky background on mobile */
+  .starry-sky {
+    height: 100%;
+    overflow: hidden;
+    background-size: cover;
+  }
+
+  /* Adjust star animation for small screens */
+  .star {
+    width: 2px;
+    height: 2px;
+    animation: twinkle 3s infinite ease-in-out, moveStar 7s linear infinite;
+  }
 }
